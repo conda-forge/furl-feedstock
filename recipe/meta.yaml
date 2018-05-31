@@ -1,8 +1,8 @@
 {% set name = "furl" %}
-{% set version = "1.0.2" %}
+{% set version = "1.1" %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash = "89812a27fb0337ea9e5a12b3a876fc7accdd46ad03ae583de1abd6d5e5406bfe" %}
+{% set hash = "47b25a4c4e48d926c399a5538466134fc7aed8b357a6290dcb83e3a1b9f3aa29" %}
 {% set build = 0 %}
 
 package:
