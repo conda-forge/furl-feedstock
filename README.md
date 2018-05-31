@@ -14,9 +14,8 @@ Summary: URL manipulation made simple.
 Current build status
 ====================
 
-[![Linux](https://img.shields.io/circleci/project/github/conda-forge/furl-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/furl-feedstock)
-[![OSX](https://img.shields.io/travis/conda-forge/furl-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/furl-feedstock)
-[![Windows](https://img.shields.io/appveyor/ci/conda-forge/furl-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/furl-feedstock/branch/master)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/furl-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/furl-feedstock)
 
 Current release info
 ====================
