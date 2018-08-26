@@ -3,7 +3,6 @@
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
 {% set hash = "17654103b8d0cbe42798592db099c728165ac12057d49fe2e69de967d87bf29b" %}
-{% set build = 0 %}
 
 package:
   name: {{ name|lower }}
@@ -16,18 +15,18 @@ source:
 
 build:
   noarch: python
-  number: {{ build }}
-  script: python -m pip install --no-deps --ignore-installed .
+  number: 0
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
 
 requirements:
-  build:
+  host:
     - python
     - pip
 
   run:
     - python
     - six >=1.8.0
-    - orderedmultidict >=0.7.8
+    - orderedmultidict >=1.0
 
 test:
   imports:
