@@ -1,8 +1,7 @@
 {% set name = "furl" %}
-{% set version = "2.1.0" %}
+{% set version = "2.1.2" %}
 {% set bundle = "tar.gz" %}
-{% set hash_type = "sha256" %}
-{% set hash = "c0e0231a1feee2acd256574b7033df3144775451c610cb587060d6a0d7e0b621" %}
+{% set hash = "f7dba33eafbee7dbc83963534b25e72f816cced48ac53191ee60bfcc62933918" %}
 
 package:
   name: {{ name|lower }}
@@ -11,12 +10,12 @@ package:
 source:
   fn: {{ name }}-{{ version }}.{{ bundle }}
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
-  {{ hash_type }}: {{ hash }}
+  sha256: {{ hash }}
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
 requirements:
   host:
@@ -36,7 +35,7 @@ about:
   home: https://github.com/gruns/furl
   license_file: LICENSE.md
   license: PUBLIC-DOMAIN
-  summary: 'URL manipulation made simple.'
+  summary: URL manipulation made simple.
   dev_url: https://github.com/gruns/furl
   doc_url: https://github.com/gruns/furl
 
