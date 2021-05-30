@@ -35,7 +35,7 @@ test:
 about:
   home: https://github.com/gruns/furl
   license_file: LICENSE.md
-  license: PUBLIC-DOMAIN
+  license: Unlicense
   summary: 'URL manipulation made simple.'
   dev_url: https://github.com/gruns/furl
   doc_url: https://github.com/gruns/furl
