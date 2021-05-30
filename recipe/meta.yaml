@@ -1,41 +1,41 @@
 {% set name = "furl" %}
-{% set version = "2.1.0" %}
-{% set bundle = "tar.gz" %}
-{% set hash_type = "sha256" %}
-{% set hash = "c0e0231a1feee2acd256574b7033df3144775451c610cb587060d6a0d7e0b621" %}
+{% set version = "2.1.2" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.{{ bundle }}
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
-  {{ hash_type }}: {{ hash }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: f7dba33eafbee7dbc83963534b25e72f816cced48ac53191ee60bfcc62933918
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - pip
 
   run:
-    - python
+    - python >=3.6
     - six >=1.8.0
     - orderedmultidict >=1.0
 
 test:
   imports:
     - furl
+  commands:
+    - pip check
+  requires: 
+    - pip
 
 about:
   home: https://github.com/gruns/furl
   license_file: LICENSE.md
-  license: PUBLIC-DOMAIN
+  license: Unlicense
   summary: 'URL manipulation made simple.'
   dev_url: https://github.com/gruns/furl
   doc_url: https://github.com/gruns/furl
@@ -43,3 +43,4 @@ about:
 extra:
   recipe-maintainers:
     - pmlandwehr
+    - jan-janssen
