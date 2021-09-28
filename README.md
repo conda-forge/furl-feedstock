@@ -3,7 +3,7 @@ About furl
 
 Home: https://github.com/gruns/furl
 
-Package license: PUBLIC-DOMAIN
+Package license: Unlicense
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/furl-feedstock/blob/master/LICENSE.txt)
 
